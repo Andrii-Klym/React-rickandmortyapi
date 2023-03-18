@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import arrow from "../../images/arrow_back_24px.png"
 
 const CardDetails = () => {
     let { id } = useParams();
@@ -17,6 +20,14 @@ const CardDetails = () => {
 
     return (
         <div className="container d-flex justify-content-center mb-5">
+            <Link
+                style={{ textDecoration: "none" }}
+                to="/">
+                    <div>
+                        <button className="position-absolute top-0 start-0 fw-bold bg-transparent border-0">
+                            <img src={arrow} alt="arrow" /> GO BACK</button>
+                    </div>
+            </Link>
         <div className="d-flex flex-column gap-3">
             <h1 className="text-center">Name: {name}</h1>
 

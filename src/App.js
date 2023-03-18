@@ -6,6 +6,7 @@ import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 import Pagination from "./components/Pagination/Pagination";
 import Filter from "./components/Filter/Filter";
+import logo from "./images/logo.png"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CardDetails from "./components/Card/CardDetails";
@@ -41,7 +42,9 @@ const Home = () => {
   
   return (
     <div className="App">
-      <h1 className="text-center text-center fw-bold my-4">rickandmortyapi test</h1>
+      <div className="text-center">
+        <img className="col-4 mx-auto text-center " src={logo} alt="logo" />
+      </div>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">

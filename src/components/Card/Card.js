@@ -7,7 +7,7 @@ const Card = ({ page, results }) => {
 
     if (results) {
         display = results.map((x) => {
-        let { id, image, name, status } = x;
+        let { id, image, name, status, species } = x;
 
         return (
             <Link
@@ -20,6 +20,9 @@ const Card = ({ page, results }) => {
                 <div className={`${styles.content}`}>
                 <div className="fs-5 fw-bold">
                     {name}
+                </div>
+                <div>
+                    {species}
                 </div>
                 </div>
             </div>
